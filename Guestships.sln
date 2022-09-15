@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guestships.API", "Guestships.API\Guestships.API.csproj", "{FD4C1CB8-A69D-43C9-9DB9-AC4A68DCB941}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "guestships.reactapp", "Guestships.ReactApp\guestships.reactapp.esproj", "{FDB0B26D-D3AE-4063-9504-BB566C74BF52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD4C1CB8-A69D-43C9-9DB9-AC4A68DCB941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4C1CB8-A69D-43C9-9DB9-AC4A68DCB941}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4C1CB8-A69D-43C9-9DB9-AC4A68DCB941}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4C1CB8-A69D-43C9-9DB9-AC4A68DCB941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB0B26D-D3AE-4063-9504-BB566C74BF52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDB0B26D-D3AE-4063-9504-BB566C74BF52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDB0B26D-D3AE-4063-9504-BB566C74BF52}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FDB0B26D-D3AE-4063-9504-BB566C74BF52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDB0B26D-D3AE-4063-9504-BB566C74BF52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDB0B26D-D3AE-4063-9504-BB566C74BF52}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29B5EE93-2C8B-42EF-938D-68E38A4A0E21}
+	EndGlobalSection
+EndGlobal
