@@ -1,7 +1,8 @@
 .hole {
     background-color:darkslateblue;
     color: black !important;
-    font-size: 20px;
+    font-size: calc(10px + 2vmin);
+    width: 5vw;
 }
 
 .shot-miss {
