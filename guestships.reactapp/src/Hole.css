@@ -1,0 +1,13 @@
+.hole {
+    background-color:darkslateblue;
+    color: black !important;
+    font-size: 20px;
+}
+
+.shot-miss {
+    color: antiquewhite !important;
+}
+
+.shot-hit {
+    color: red !important;
+}
