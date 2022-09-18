@@ -1,7 +1,6 @@
 .hole {
     background-color:darkslateblue;
     color: black !important;
-    font-size: calc(10px + 2vmin);
     width: 5vw;
 }
 

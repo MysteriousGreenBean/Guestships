@@ -1,5 +1,4 @@
 .label {
     min-width: 5vw !important;
-    padding-left: 2vw;
-    font-size: calc(10px + 2vmin);
+    width: 5vw !important;
 }
