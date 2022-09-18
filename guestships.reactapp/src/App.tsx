@@ -4,18 +4,12 @@ import './App.css';
 import { Hole } from './Hole';
 import { ShipType } from './ShipType';
 import { Board } from './Board';
-import { Col, Form, Row } from 'reactstrap';
+
 
 function App() {
   return (
     <div className="App">
-        <Form>
-        <Row>
-          <Col>
-          <Board />
-          </Col>
-        </Row> 
-        </Form>
+      <Board />
     </div>
   );
 }

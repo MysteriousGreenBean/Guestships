@@ -1,4 +1,6 @@
 .label {
     min-width: 5vw !important;
     width: 5vw !important;
+    height: 5vh;
+    font-size: calc(10px + 1vh);
 }

@@ -2,6 +2,8 @@
     background-color:darkslateblue;
     color: black !important;
     width: 5vw;
+    height: 5vh;
+    font-size: calc(10px + 2vh);
 }
 
 .shot-miss {

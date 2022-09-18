@@ -16,7 +16,7 @@ export function Hole(props: IHoleProps) {
         let isHit = props.shipType !== ShipType.NoShip;
         className += isHit ? " shot-hit" : " shot-miss";
     }
-    return <Button 
+    return <Button data-testid="hole"
         size="lg"
         className={className} 
         color="primary"
