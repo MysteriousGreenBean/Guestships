@@ -1,14 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Hole } from './Hole';
-import { ShipType } from './ShipType';
 import { Board } from './Board';
+import { FeedbackBox } from './FeedbackBox';
+import { ShipType } from './ShipType';
 
 
 function App() {
   return (
     <div className="App">
+      <FeedbackBox shipHit={ShipType.Battleship} />
       <Board />
     </div>
   );

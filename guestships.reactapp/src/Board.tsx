@@ -1,4 +1,4 @@
-import { Button, InputGroup, InputGroupText } from "reactstrap";
+import { Button, InputGroup } from "reactstrap";
 import './Board.css';
 import { Hole } from "./Hole";
 import { ShipType } from "./ShipType";
