@@ -1,16 +1,18 @@
 import { Button, InputGroup } from "reactstrap";
 import './Board.css';
+import { IBoardData } from "./BoardData";
 import { Hole } from "./Hole";
-import { ShipType } from "./ShipType";
+import { IShip } from "./Ship";
 
-export function Board() {
-    const columnLabels: string[] = GetColumnLabels();
-    const rowLabels: string[] = GetRowLabels();
+export interface IBoardProps {
+    boardData: IBoardData;
+}
 
+export function Board(props: IBoardProps) {
     return (
         <div data-testid="board">
-            { RenderRowWithColumnLabels(columnLabels, 0) }
-            { rowLabels.map((rowLabel, index) => RenderRowWithLabel(rowLabel, columnLabels, index)) }
+            { RenderRowWithColumnLabels(props.boardData.columnLabels, 0) }
+            { props.boardData.rowLabels.map((rowLabel, index) => RenderRowWithLabel(rowLabel, props.boardData, index,)) }
         </div>
     );
 }
@@ -18,29 +20,27 @@ export function Board() {
 function RenderRowWithColumnLabels(columnLabels: string[], rowKey: number): JSX.Element {
     return (
         <InputGroup key={rowKey}>
-            { GetLabelButton(" ", "empty") }
-            { columnLabels.map(label => GetLabelButton(label, label)) }
+            { RenderLabelButton(" ", "empty") }
+            { columnLabels.map(label => RenderLabelButton(label, label)) }
         </InputGroup>
     );
 }
 
-function RenderRowWithLabel(rowLabel: string, columnLabels: string[], rowKey: number): JSX.Element {
+function RenderRowWithLabel(rowLabel: string, boardData: IBoardData, rowKey: number): JSX.Element {
     return (
         <InputGroup key={rowKey}>
-            { GetLabelButton(rowLabel, rowLabel) }
-            { columnLabels.map(columLabel => <Hole key={rowLabel + columLabel} shipType={ShipType.NoShip} />) }
+            { RenderLabelButton(rowLabel, rowLabel) }
+            { boardData.columnLabels.map(columLabel => RenderHole(columLabel, rowLabel, boardData)) }
         </InputGroup>
     );
 }
 
-function GetLabelButton(label: string, key: string): JSX.Element {
+function RenderLabelButton(label: string, key: string): JSX.Element {
     return <Button key={key} className="label" size="lg" disabled={true}>{label}</Button>
 }
 
-function GetRowLabels(): string[] {
-    return ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-}
-
-function GetColumnLabels(): string[] {
-    return ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+function RenderHole(columnLabel: string, rowLabel: string, boardData: IBoardData) {
+    const coordinates: string = `${columnLabel}${rowLabel}`;
+    const shipForHole: IShip = boardData.GetShipForCoordinates(coordinates);
+    return <Hole key={coordinates} ship={shipForHole} />
 }

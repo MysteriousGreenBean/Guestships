@@ -2,9 +2,10 @@ import { useState } from "react";
 import { Button } from "reactstrap";
 import { ShipType } from "./ShipType";
 import './Hole.css';
+import { IShip } from "./Ship";
 
 export interface IHoleProps {
-    shipType: ShipType;  
+    ship: IShip; 
 }
 
 export function Hole(props: IHoleProps) {
@@ -13,7 +14,7 @@ export function Hole(props: IHoleProps) {
     let className = "hole";
 
     if (isShot) {
-        let isHit = props.shipType !== ShipType.NoShip;
+        let isHit = props.ship.shipType !== ShipType.NoShip;
         className += isHit ? " shot-hit" : " shot-miss";
     }
     return <Button data-testid="hole"
@@ -21,8 +22,11 @@ export function Hole(props: IHoleProps) {
         className={className} 
         color="primary"
         onClick={event => {
-            setIsShot(true);
-            event.currentTarget.blur();
+            if (!isShot) {
+                props.ship.Hit();
+                event.currentTarget.blur();
+                setIsShot(true);
+            }
         }}>
             ●
         </Button>

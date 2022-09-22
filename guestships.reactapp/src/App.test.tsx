@@ -1,11 +1,11 @@
-import React from 'react';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders game board', () => {
-  render(<App />);
-
-  const boardElement = screen.getByTestId('board');
-  expect(boardElement).toBeInTheDocument();
+describe(App, () => {
+  it('renders game board', () => {
+    render(<App />);
+  
+    const boardElement = screen.getByTestId('board');
+    expect(boardElement).toBeInTheDocument();
+  });
 });
-
