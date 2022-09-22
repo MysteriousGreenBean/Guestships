@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Guestships/static/css/main.29f4ec15.css",
+    "main.js": "/Guestships/static/js/main.ea9e6811.js",
+    "static/js/787.57ec33ab.chunk.js": "/Guestships/static/js/787.57ec33ab.chunk.js",
+    "index.html": "/Guestships/index.html",
+    "main.29f4ec15.css.map": "/Guestships/static/css/main.29f4ec15.css.map",
+    "main.ea9e6811.js.map": "/Guestships/static/js/main.ea9e6811.js.map",
+    "787.57ec33ab.chunk.js.map": "/Guestships/static/js/787.57ec33ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.29f4ec15.css",
+    "static/js/main.ea9e6811.js"
+  ]
+}
